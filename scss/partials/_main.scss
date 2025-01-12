@@ -1,33 +1,141 @@
 main {
-    padding: 2rem;
+    padding: 0 5rem 5rem 5rem;
 
     .heading {
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        align-items: center;
+
+        p {
+            width: 54vw;
+        }
     }
 
-    // .first {
-        
-    // }
+    h1 {
+        font-size: 48px;
+        color: hsl(210, 10%, 33%);
+    }
+
+    h2 {
+        font-size: 40px;
+        color: hsl(210, 10%, 33%);
+    }
+
+    h4 {
+        color: hsl(210, 10%, 33%);
+        font-size: 22px;
+        margin: 0 0 1rem 0;
+    }
+
+    .first {
+        margin-bottom: 7rem;
+    }
 
     .button-container {
         display: flex;
         justify-content: center;
         gap: 1rem;
+        margin: 2rem 0 0 0;
+
+        button {
+            border-radius: 25px;
+            border: none;
+            box-shadow: 0 5px 10px rgba($color: #5c5c5c, $alpha: 0.4);
+            padding: 1rem;
+            width: 240px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            &.btn1 {
+                background-color: hsl(171, 66%, 44%);
+                box-shadow: 0 5px rgba($color: hsl(171, 66%, 35%), $alpha: 1);
+
+                &:hover {
+                    background-color: hsl(171, 66%, 44%, 0.8);
+                    box-shadow: 0 0 rgba($color: #000000, $alpha: 1.0);
+                    transform: translateY(5px);
+                }
+            }
+
+            &.btn2 {
+                background-color: hsl(233, 100%, 69%);
+                box-shadow: 0 5px rgba($color: hsl(233, 100%, 64%), $alpha: 1);
+
+                &:hover {
+                    background-color: hsl(233, 100%, 69%, 0.8);
+                    box-shadow: 0 0 rgba($color: #000000, $alpha: 1.0);
+                    transform: translateY(5px);
+                }
+            }
+        }
     }
 
     .second {
+        margin-bottom: 7vw;
+
         .computer-box {
             display: flex;
+            margin-top: 5vw;
+
+            .small-box {
+                flex: 1 1 50%;
+            }
+
+            .comp-image {
+                img {
+                    width: 100%;
+                    transform: translateX(-20%);
+                }
+            }
+
+            .headings-box {
+                padding: 2rem;
+                .small-hd {
+                    width: 29vw;
+                }
+            }
+        }
+    }
+
+    .third {
+        .heading {
+
+            .device-image {
+                margin-top: 5vw;
+                
+                img {
+                    width: 90vw;
+                }
+            }
         }
     }
 
     .fourth {
+        margin-bottom: 7rem;
+
         .workflow-icon-container {
             display: flex;
+            margin-top: 4rem;
+            width: 100%;
+            justify-content: center;
     
             .icon-box {
-                width: 100%;
+                width: 27vw;
                 text-align: center;
+
+                h4 {
+                    margin: 2rem 0 1rem 0;
+                }
+                
+                img {
+                    height: 40px;
+                }
             }
         }
     }
@@ -36,11 +144,30 @@ main {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-bottom: 6rem;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
 }
 
 @media screen and (max-width:769px) {
     main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        .heading {
+            p {
+                width: 93vw;
+            }
+        }
 
         // .first {
 
@@ -48,11 +175,33 @@ main {
 
         .button-container {
             flex-direction: column;
+            
+            button {
+                width: 85vw;
+            }
         }
 
         .second {
             .computer-box {
                 flex-direction: column;
+
+                .comp-image {
+                    text-align: center;
+                    margin-top: 2rem;
+                    img {
+                        transform: translateY(0);
+                        width: 85vw;
+                    }
+                }
+
+                .headings-box {
+                    text-align: center;
+                    margin-top: 3rem;
+                    padding: 0;
+                    .small-hd {
+                        width: 100%;
+                    }
+                }
             }
         }
 
@@ -67,6 +216,10 @@ main {
         .fourth {
             .workflow-icon-container {
                 flex-direction: column;
+
+                .icon-box {
+                    width: 100%;
+                }
             }
         }
 
@@ -75,6 +228,7 @@ main {
             margin: 10rem;
             flex-direction: column;
             row-gap: 5rem;
+            flex-wrap: nowrap;
         }
     }
 }

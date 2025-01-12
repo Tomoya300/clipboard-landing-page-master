@@ -1,9 +1,13 @@
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
-    height: 50vh;
+    height: 40vh;
+
+    img {
+        margin-bottom: 1rem;
+    }
 }

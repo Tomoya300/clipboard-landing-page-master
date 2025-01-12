@@ -8,4 +8,14 @@
 
 body {
     margin: 0;
+    font-family: "Bai Jamjuree", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: hsl(201, 11%, 66%);
+
+    p {
+        margin: 0 0 1rem 0;
+        line-height: 1.5;
+    }
 }

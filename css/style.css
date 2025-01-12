@@ -1,38 +1,46 @@
 header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 40vh;
+}
+header img {
+  margin-bottom: 1rem;
 }
 
 footer {
-  background-color: lightgray;
+  background-color: hsl(0, 0%, 95%);
   margin-top: 5rem;
   padding: 3rem 0 0 0;
 }
 footer .footer-top {
   display: grid;
   grid-auto-flow: column;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 footer .footer-top .left-box {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 footer .footer-top .left-box .footer-logo {
   width: 50px;
 }
 footer .footer-top .left-box .faq-box {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: column;
   align-items: center;
   width: 50vw;
+  gap: 1rem;
 }
 footer .footer-top .left-box .faq-box a {
   text-decoration: none;
+  color: hsl(210, 10%, 33%);
 }
 footer .footer-top .socials {
   display: flex;
@@ -40,39 +48,182 @@ footer .footer-top .socials {
   gap: 1rem;
 }
 
+@media screen and (max-width: 769px) {
+  footer .footer-top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  footer .footer-top .left-box {
+    flex-direction: column;
+  }
+  footer .footer-top .left-box .faq-box {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    row-gap: 1.5rem;
+  }
+  footer .footer-top .socials {
+    gap: 2.2rem;
+  }
+}
 main {
-  padding: 2rem;
+  padding: 0 5rem 5rem 5rem;
 }
 main .heading {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
+}
+main .heading p {
+  width: 54vw;
+}
+main h1 {
+  font-size: 48px;
+  color: hsl(210, 10%, 33%);
+}
+main h2 {
+  font-size: 40px;
+  color: hsl(210, 10%, 33%);
+}
+main h4 {
+  color: hsl(210, 10%, 33%);
+  font-size: 22px;
+  margin: 0 0 1rem 0;
+}
+main .first {
+  margin-bottom: 7rem;
 }
 main .button-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin: 2rem 0 0 0;
+}
+main .button-container button {
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 5px 10px rgba(92, 92, 92, 0.4);
+  padding: 1rem;
+  width: 240px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+main .button-container button a {
+  text-decoration: none;
+  color: white;
+}
+main .button-container button.btn1 {
+  background-color: hsl(171, 66%, 44%);
+  box-shadow: 0 5px rgb(30.345, 148.155, 130.4835);
+}
+main .button-container button.btn1:hover {
+  background-color: hsla(171, 66%, 44%, 0.8);
+  box-shadow: 0 0 black;
+  transform: translateY(5px);
+}
+main .button-container button.btn2 {
+  background-color: hsl(233, 100%, 69%);
+  box-shadow: 0 5px rgb(71.4, 92.82, 255);
+}
+main .button-container button.btn2:hover {
+  background-color: hsla(233, 100%, 69%, 0.8);
+  box-shadow: 0 0 black;
+  transform: translateY(5px);
+}
+main .second {
+  margin-bottom: 7vw;
 }
 main .second .computer-box {
   display: flex;
+  margin-top: 5vw;
+}
+main .second .computer-box .small-box {
+  flex: 1 1 50%;
+}
+main .second .computer-box .comp-image img {
+  width: 100%;
+  transform: translateX(-20%);
+}
+main .second .computer-box .headings-box {
+  padding: 2rem;
+}
+main .second .computer-box .headings-box .small-hd {
+  width: 29vw;
+}
+main .third .heading .device-image {
+  margin-top: 5vw;
+}
+main .third .heading .device-image img {
+  width: 90vw;
+}
+main .fourth {
+  margin-bottom: 7rem;
 }
 main .fourth .workflow-icon-container {
   display: flex;
+  margin-top: 4rem;
+  width: 100%;
+  justify-content: center;
 }
 main .fourth .workflow-icon-container .icon-box {
-  width: 100%;
+  width: 27vw;
   text-align: center;
+}
+main .fourth .workflow-icon-container .icon-box h4 {
+  margin: 2rem 0 1rem 0;
+}
+main .fourth .workflow-icon-container .icon-box img {
+  height: 40px;
 }
 main .fifth {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 @media screen and (max-width: 769px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  main h1 {
+    font-size: 40px;
+  }
+  main h2 {
+    font-size: 32px;
+  }
+  main .heading p {
+    width: 93vw;
+  }
   main .button-container {
     flex-direction: column;
   }
+  main .button-container button {
+    width: 85vw;
+  }
   main .second .computer-box {
     flex-direction: column;
+  }
+  main .second .computer-box .comp-image {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  main .second .computer-box .comp-image img {
+    transform: translateY(0);
+    width: 85vw;
+  }
+  main .second .computer-box .headings-box {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 0;
+  }
+  main .second .computer-box .headings-box .small-hd {
+    width: 100%;
   }
   main .third .heading img {
     width: 100%;
@@ -80,10 +231,14 @@ main .fifth {
   main .fourth .workflow-icon-container {
     flex-direction: column;
   }
+  main .fourth .workflow-icon-container .icon-box {
+    width: 100%;
+  }
   main .fifth {
     margin: 10rem;
     flex-direction: column;
     row-gap: 5rem;
+    flex-wrap: nowrap;
   }
 }
 * {
@@ -92,6 +247,15 @@ main .fifth {
 
 body {
   margin: 0;
+  font-family: "Bai Jamjuree", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: hsl(201, 11%, 66%);
+}
+body p {
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=style.css.map */
