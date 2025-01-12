@@ -1,0 +1,35 @@
+footer {
+    background-color: lightgray;
+    margin-top: 5rem;
+    padding: 3rem 0 0 0;
+    .footer-top {
+        display: grid;
+        grid-auto-flow: column;
+
+        .left-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+            .footer-logo {
+                width: 50px;
+            }
+            .faq-box {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: center;
+                width:50vw;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+}

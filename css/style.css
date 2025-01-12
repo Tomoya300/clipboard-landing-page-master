@@ -1,0 +1,97 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+footer {
+  background-color: lightgray;
+  margin-top: 5rem;
+  padding: 3rem 0 0 0;
+}
+footer .footer-top {
+  display: grid;
+  grid-auto-flow: column;
+}
+footer .footer-top .left-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .footer-top .left-box .footer-logo {
+  width: 50px;
+}
+footer .footer-top .left-box .faq-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width: 50vw;
+}
+footer .footer-top .left-box .faq-box a {
+  text-decoration: none;
+}
+footer .footer-top .socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+main .heading {
+  text-align: center;
+}
+main .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+main .second .computer-box {
+  display: flex;
+}
+main .fourth .workflow-icon-container {
+  display: flex;
+}
+main .fourth .workflow-icon-container .icon-box {
+  width: 100%;
+  text-align: center;
+}
+main .fifth {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 769px) {
+  main .button-container {
+    flex-direction: column;
+  }
+  main .second .computer-box {
+    flex-direction: column;
+  }
+  main .third .heading img {
+    width: 100%;
+  }
+  main .fourth .workflow-icon-container {
+    flex-direction: column;
+  }
+  main .fifth {
+    margin: 10rem;
+    flex-direction: column;
+    row-gap: 5rem;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
